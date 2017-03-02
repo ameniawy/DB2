@@ -59,7 +59,7 @@ public class Table {
 		String fileName = "tabledata/" + name + "/page" + numPages + ".csv";
 		FileWriter pw = new FileWriter(fileName,true);
 		
-		StringJoiner sj = new StringJoiner(", ", "", "");
+		StringJoiner sj = new StringJoiner(", ", "", "\n");
 		
 		for(String col : record){
 			sj.add(col);
@@ -67,7 +67,6 @@ public class Table {
 		
 		String row = sj.toString();
 		pw.append(row);
-		pw.append("\n");
 		pw.flush();
 		pw.close();
 		System.out.println(row);
