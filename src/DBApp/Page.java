@@ -11,6 +11,7 @@ public class Page {
 	//First Step: Constructing a page - You should initialize the variables given above -
 	public Page(int noCol)
 	{
+		this.data = new String[200][noCol];
 		
 	}
 	
