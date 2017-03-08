@@ -52,9 +52,9 @@ public class Table {
 		if(this.last == null || this.last.isFull()){
 			Page x = new Page(record.length);
 			addPage(x);
-			//x.insert(record);
+			x.insert(record);
 		} else{
-			//this.last.insert(record);
+			this.last.insert(record);
 		}
 		String fileName = "tabledata/" + name + "/page" + numPages + ".csv";
 		FileWriter pw = new FileWriter(fileName,true);
